@@ -1,0 +1,31 @@
+body{
+  margin:0;
+  padding: 10px
+}
+input{
+  border: solid #5f9341;
+  padding: 1vh 2vw 1vh 2vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+button{
+  margin-top: 1vh;
+  background-color: #5f9341;
+  padding: 1vh 1vw 1vh 1vw;
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+}
+button:hover{
+  background-color: black;
+  color: white;
+}
+#box-el{
+  background-color: blue;
+  height: 100px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}

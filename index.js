@@ -7,7 +7,7 @@ inputBtn.addEventListener("click", function () {
   myLead.push(inputEl.value);
   renderLeads();
   myLead.pop();
-  inputEl.value=null;
+  inputEl.value = null;
 });
 
 function renderLeads() {
@@ -15,7 +15,11 @@ function renderLeads() {
   for (let item = 0; item < myLead.length; item++) {
     listItems = myLead[item];
     const li = document.createElement("li");
-    li.textContent += listItems;
+    const a = document.createElement("a");
+    a.textContent += listItems;
+    li.append(a);
+    a.href = myLead[item];
+    a.target = "_blank"
     ulEl.append(li);
   }
 }

@@ -1,14 +1,15 @@
-body{
-  margin:0;
-  padding: 10px
+body {
+  margin: 0;
+  padding: 10px;
+  min-width: 400px;
 }
-input{
+input {
   border: solid #5f9341;
   padding: 1vh 2vw 1vh 2vw;
   width: 100%;
   box-sizing: border-box;
 }
-button{
+button {
   margin-top: 1vh;
   background-color: #5f9341;
   padding: 1vh 1vw 1vh 1vw;
@@ -17,15 +18,27 @@ button{
   font-size: 1em;
   font-weight: bold;
 }
-button:hover{
+button:hover {
   background-color: black;
   color: white;
 }
-#box-el{
+#box-el {
   background-color: blue;
   height: 100px;
   width: 100%;
   color: white;
   display: flex;
   align-items: center;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1vh;
+}
+a {
+  color: #5f9341;
 }

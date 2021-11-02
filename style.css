@@ -5,7 +5,7 @@ body {
 }
 input {
   border: solid #5f9341;
-  padding: 1vh 2vw 1vh 2vw;
+  padding: 2vh 2vw 2vh 2vw;
   width: 100%;
   box-sizing: border-box;
 }

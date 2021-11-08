@@ -30,15 +30,28 @@ button:hover {
   display: flex;
   align-items: center;
 }
-ul {
+#ulOne-el {
   list-style: none;
   padding-left: 0;
 }
-li {
+#ulOne-el li {
   font-size: 1em;
   font-weight: bold;
   margin-top: 1vh;
 }
-a {
+#ulOne-el a {
   color: #5f9341;
+}
+
+#ulTwo-el {
+  list-style: none;
+  padding-left: 0;
+}
+#ulTwo-el li {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1vh;
+}
+#ulTwo-el a {
+  color: red;
 }

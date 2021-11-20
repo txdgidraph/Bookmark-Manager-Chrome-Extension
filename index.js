@@ -17,7 +17,13 @@ document
   .addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
-      renderLeads();
+      if (inputEl.value !== "") {
+        myLeads.push(inputEl.value);
+        console.log(myLeads);
+        renderLeads();
+      } else {
+        window.prompt("NO LEAD ENTERED");
+      }
     } else {
       //
     }
@@ -29,7 +35,6 @@ document.querySelector("#save-btn").addEventListener("click", function () {
     renderLeads();
   } else {
     window.prompt("NO LEAD ENTERED");
-    
   }
 });
 
@@ -47,7 +52,17 @@ function renderLeads() {
 }
 
 function saveToLocalStorage() {
-  localStorage.setItem("Leads", JSON.stringify(myLeads));
+  if (localStorage.getItem("Leads") === null) {
+    localStorage.setItem("Leads", JSON.stringify(myLeads));
+  } else {
+    let storedLeads = JSON.parse(localStorage.getItem("Leads"));
+    let arrayOne = myLeads.concat(storedLeads);
+    let arrayTwo = arrayOne.filter(
+      (item, pos) => arrayOne.indexOf(item) === pos
+    );
+    console.log(arrayTwo);
+    localStorage.setItem("Leads", JSON.stringify(arrayTwo));
+  }
 }
 
 function getFromLocalStorage() {
@@ -71,6 +86,13 @@ function saveCurrentTab() {
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     //ulElementTwo.textContent += tabs[0].url;
     myLeads.push(tabs[0].url);
-    renderLeads()
+    renderLeads();
   });
+}
+function defaultLead() {
+  if (localStorage.getItem("Leads") === null) {
+    localStorage.setItem("Leads", "ByMattaOrigin");
+  } else {
+    console.log("Data exists");
+  }
 }

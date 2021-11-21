@@ -5,18 +5,22 @@ body {
 }
 input {
   border: solid #5f9341;
-  padding: 2vh 2vw 2vh 2vw;
+  padding: 4vh 4vw 4vh 4vw;
   width: 100%;
   box-sizing: border-box;
+}
+.buttonsDiv{
+  margin-top: 4vh;
+  width: 25%;
 }
 button {
   margin-top: 1vh;
   background-color: #5f9341;
-  padding: 1vh 1vw 1vh 1vw;
   color: white;
   border: none;
   font-size: 1em;
   font-weight: bold;
+  width: 30vw;
 }
 button:hover {
   background-color: black;
